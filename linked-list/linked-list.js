@@ -37,8 +37,27 @@ class LinkedList {
         previous = node;
         node = node.next;
     }
-    find(val)
+    find(node) {
+
+        let current = this.head;
+        if (!node) {
+            return null;
+        }
+
+        while (current) {
+            // Break out when we find the node
+            if (current.next === node) {
+                break;
+            }
+
+
+            current = current.next;
+        }
+
+        return current;
+    }
 }
+
 
 
 
